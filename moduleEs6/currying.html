@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    //     function sum(a){
+    //         return function(b){
+    //             return function(c){
+    //                return function(d){
+    //                 return a+b+c+d
+    //                }
+    //             }
+    //         }
+    //     }
+
+    //   console.log(sum(4)(5)(6)(7))
+      
+        // const myData = [83,76,23,64,34]
+
+        // for(let i=0;i<myData.length;i++){
+        //     for(let j=i+1;j<myData.length;j++){
+        //         let temp=0;
+        //             if(myData[i]>myData[j]){
+        //                 temp = myData[i]
+        //                 myData[i] = myData[j]
+        //                 myData[j] = temp
+        //             }
+        //     }
+           
+        // }
+
+
+// for(let i=0;i<myData.length;i++){
+//     for(let j=i+1;j<myData.length;j++){
+//         let temp=0;
+//         if(myData[i]>myData[j]){
+//             temp= myData[i]
+//             myData[i] = myData[j]
+//             myData[j] = temp
+//         }
+//     }
+// }
+
+
+// const BigNumber = [23,77,33,89,23,88]
+// console.log(Math.max(...BigNumber));
+// console.log(Math.min(...BigNumber));
+
+
+// console.log(Math.round( Math.random()*1000) );
+
+
+const myData = [18,12,78,89]
+
+for(let i=0;i<myData.length;i++){
+    for(let j=i+1;j<myData.length;j++)
+    {
+       if(myData[i]>myData[j]){
+        let temp = myData[i]
+        myData[i] =myData[j]
+        myData[j]= temp
+   console.log(myData);
+   break
+       }
+    }
+}
+
+    </script>
+</body>
+</html>

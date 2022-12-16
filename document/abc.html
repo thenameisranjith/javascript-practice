@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>I am ranjith</p>
+    <script>
+       const person = {
+        name:"Ranjith",
+        age:27,
+        addrees:"shivamogga"      
+       }
+       const person1 = {
+        name:"sachin",
+        age:29,
+        addrees:"shivamogga"      
+       }
+
+         const  getDetails=function(job,place) {
+            console.log(this.name+" ",this.age+"",job+" "+place)
+        } 
+
+
+    // getDetails.call(person,"Web developer","Banglore")
+    // getDetails.call(person1,"tester","Mumbai")
+
+
+
+    // getDetails.apply(person,["Web developer","Banglore"])
+    // getDetails.apply(person1,["tester","Mumbai"])
+
+
+    let myDetails = getDetails.bind(person,["Web developer","Banglore"])
+    console.log(myDetails)
+    </script>
+
+
+</body>
+
+</html>

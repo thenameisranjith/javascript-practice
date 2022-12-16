@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const ages = [1, 43, 54, 5];
+
+        const checkAge = (age) => {
+            console.log("==", age)
+            return age > 10
+        }
+
+        document.write("===", ages.every(checkAge))
+
+
+
+        const names = ["nami", "nami1", "nami2", "nami3"];
+
+        const checkNameisPresent = (name) => {
+            return name === "nami"
+        }
+
+        document.write("<br/>", names.every(checkNameisPresent))
+
+
+        const marriedStatus = [true, true, true, true];
+
+        const IsMarried = (person) => {
+            return person === true
+        }
+
+        document.write("<br/>", marriedStatus.every(IsMarried))
+    </script>
+</body>
+
+</html>

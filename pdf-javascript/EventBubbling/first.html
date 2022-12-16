@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Bubbling Event in Javascript</h2>
+    <div id="parent">
+        <button>
+            <h2>Parent</h2>
+        </button>
+        <button id="child">
+            <p>Child</p>
+        </button>
+    </div>
+    <script>
+        document.getElementById(
+            "child").addEventListener("click", function () {
+                alert("You clicked the Child element!");
+            }, false);
+
+        document.getElementById(
+            "parent").addEventListener("click", function () {
+                alert("You clicked the parent element!");
+            }, false);
+
+            
+    </script>
+</body>
+
+<!-- To prevent  -->
+<!-- <script>
+
+    call=()=>{
+        alert("hi")
+        event.stopPropagation()
+    }
+</script>
+<body onclick="alert(`the bubbling doesn't reach here`)">
+    <button onclick="call()">Click me</button>
+  </body> -->
+  
+</html>

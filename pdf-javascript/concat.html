@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Concat</h1>
+    <script>
+
+
+        const User = {
+            name: 'ABC',
+        };
+        const User1 = {
+            name: 'XYZ',
+        };
+        function printName(age, city) {
+            console.log(this.name, age, city);
+        }
+        const boundedPrintName = printName.bind(User);
+        const boundedNewPrintName = boundedPrintName.bind(User1);
+        boundedNewPrintName(26, 'Pune');
+
+
+
+    </script>
+</body>
+
+</html>

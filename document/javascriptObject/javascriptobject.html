@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const userDetails = {
+      name: "Ranjith",
+      age: 26,
+      company: "ibm",
+      isMarried: false,
+    };
+    const keys = Object.keys(userDetails)
+    console.log(keys);
+
+    const values = Object.values(userDetails)
+    console.log(values);
+
+
+    const otherDetails = {
+      addrees: "shimoga",
+      pincode: "577205"
+    }
+
+    const result = Object.assign(userDetails, otherDetails);
+    console.log(result)
+
+    const operatingSystem = {
+      name: "Lenovo",
+      version: "Thinkpad",
+      ram: "32gb"
+    }
+
+    console.log(Object.entries(operatingSystem))
+
+
+    const categories = {
+      web: "Javascript",
+      app: "Android"
+    }
+
+    console.log(Object.entries(categories))
+
+
+    //COPY OF AN OBJECT
+
+    const travel = {
+      country: "India",
+      state: "Karnataka",
+      district: "Shivamogga",
+      pincode: "577201"
+    }
+
+
+    const cloneRes = { ...travel }
+    console.log(cloneRes)
+    console.log(travel);
+
+    // OBJECT SEAL
+
+    var obj = {
+      country: "India",
+      state: "Karnataka",
+    }
+    console.log(obj.country);
+
+    Object.seal(obj)
+    obj.country = "Canada"
+    obj.village = "mrf cillable"
+
+    console.log(obj);
+
+
+
+    // OBJECT FREEZE 
+
+    const laptop = {
+      size: 14,
+      color: "black",
+      working: true
+    }
+
+    console.log(laptop);
+    laptop.battery = "4000MAH"
+    console.log(laptop);
+    Object.freeze(laptop)
+    laptop.weight = "1.45kg"
+    console.log(laptop)
+
+
+
+
+    // OPTIONAL CHAINING
+
+    const obj3 = {
+      x: {
+        y: 1,
+        z: 2
+      },
+      others: [
+        'test',
+        'tested'
+      ]
+    }
+    console.log(obj3);
+  </script>
+</body>
+
+</html>

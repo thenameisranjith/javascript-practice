@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var myList = [34, 67, 45, 79, 90, 12];
+
+
+        // for (let i = myList.length - 1; i >= 0; i--) {
+        //     document.write(myList[i] + " ")
+        // }
+
+
+
+        // var numbers = [23, 55, 65, 57, 78];
+        // var reversedNum = [];
+        // for (let i = numbers.length - 1; i >= 0; i--) {
+        //     reversedNum.push(numbers[i]);
+
+        // }
+        // console.log(reversedNum)
+        // document.write("<br/>" + "")
+        // document.write("=========Reverse order==============")
+
+
+
+
+
+        // var myList = "aavvbbnnmmmplm"
+
+        // var count = {};
+        // for (let i = 0; i < myList.length; i++) {
+        //     var num = myList[i]
+        //     count[num] = count[num] ? count[num] + 1 : 1
+        // }
+        // console.log(count)
+       
+        
+        // console.log(countZero(mynumbers));
+
+        // console.log("===========COUNT 1 AND 0 ============")
+
+
+
+
+
+
+        // const countZero = (numbers, myLuckyNumber) => {
+        //     let count = 0;
+        //     for (let i = 0; i < numbers.length; i++) {
+        //         if (numbers[i] === myLuckyNumber) {
+        //             return true
+        //             break
+        //         }
+
+        //     }
+        //     return false
+        // }
+
+
+        // let mynumbers = [90, 54, 56, 67, 67, 89]
+        // console.log(countZero(mynumbers, 66));
+
+        // console.log("===========SPECIFIC NUMBER  ============");
+
+
+
+
+
+
+
+    //     var array = [1, 2, 3, 5, 1, 5, 9, 1, 2, 8];
+
+    //    console.log([...new Set(array)])
+
+
+        // console.log("===========UNIQUE NUMBERS  ============");
+
+
+
+
+        // var mynum = [45, 45, 57, 57, 68, 68, 88, 80];
+
+        // for (let i = 0; i < mynum.length; i++) {
+        //     let count = 0;
+        //     for (let j = i + 1; j < mynum.length; j++) {
+        //         if (mynum[i] == mynum[j]) {
+        //             count++;
+        //         }
+        //     }
+        //     if (count === 1) {
+        //         console.log(mynum[i]);
+        //     }
+
+        // }
+
+
+        var arr = [100, 101, 30, 60, 20, 120];
+
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                let tmp = 0;
+                if (arr[i] > arr[j]) {
+                    tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
+                }
+            }
+            //prints the sorted element of the array
+            console.log(arr[i]);
+        }
+        const seconLastNumber = arr[arr.length - 2]; // 4
+        console.log("====" + seconLastNumber)
+
+
+
+    </script>
+</body>
+
+</html>

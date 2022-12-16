@@ -1,0 +1,26 @@
+@mixin flexcenter($direction,$background) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: $direction;
+    background:$background;
+}
+
+
+header{
+    @include flexcenter(column,blueviolet);
+    // background: lightskyblue;
+     color: $primaryTextColor;
+
+    button{
+        background: $primaryBtn;
+        &::after{
+            content: "Ranjith";
+        }
+    }
+
+    h1{
+        font-style: italic;
+    }
+}

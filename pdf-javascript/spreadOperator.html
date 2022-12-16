@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> SPREAD OPERATOR</h1>
+    <script>
+
+        const myList = ["pavan", "nazeem", "sachin"];
+        document.write(myList)
+        const otherList = [...myList, "Akshay", "sandeep"]
+        console.log(otherList)
+
+        const myScore = [34, 54, 24];
+        const yourScore = [35, 76, 64, 65];
+        const otherScore = [45,78,90]
+        const totalScore = [...myScore, ...yourScore,...otherScore];
+        document.write(totalScore);
+
+        const emp1 = [
+            {name:"ranith",age:27,job:"Accenture"},
+            {name:"sanith",age:27,job:"NTT"},
+            {name:"panith",age:27,job:"Galarty"}
+        ]
+        const emp2 = [
+            {name:"ranith",age:29,job:"asdf"},
+            {name:"sanith",age:27,job:"asdf"},
+            {name:"panith",age:20,job:"salarty"}
+        ]
+
+      const total = [...emp1,...emp2]
+
+      console.log(total);
+
+      const emp4 = {name:"ranith",age:27,job:"Accenture"}
+      const emp5 = {address:"oanith",pincode:"577205",state:"Infosys"}
+
+      const combine = {...emp4,...emp5}
+      console.log(combine);
+
+
+      const ObjectKeys = Object.keys(combine)
+      console.log(ObjectKeys);
+      const ObjectValues = Object.values(combine)
+      console.log(ObjectValues);
+
+        const person = {
+            name: "Ranjith"
+        }
+        const fullDetails = {
+            ...person,
+            age: 26
+        }
+
+        console.log(fullDetails)
+
+        const emp = {
+            name:"Ranjit",
+            company:"IBM",
+            address:"Bangalore"
+        }
+
+
+        const {name,...rest} = emp
+        console.log(name,rest)
+
+        // const newEmployee = {...emp,company:"New Compnay MNC"}
+        // console.log(newEmployee)
+
+
+    </script>
+</body>
+
+</html>

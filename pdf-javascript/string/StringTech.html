@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        //Reverse oreder
+        // var myString = "ranjith";
+        // for (let i = myString.length - 1; i >= 0; i--) {
+        //     console.log(myString[i])
+        // }
+
+        //word count
+
+        // var myString = "I will get job and good salary";
+        // let count = 1;
+        // for (let i = 0; i < myString.length; i++) {
+
+        //     if (myString[i] === " ") {
+        //         count++;
+        //     }
+        // }
+        // console.log(count)
+
+       // Frequency
+        var myString = "aswawqerqweeer";
+
+        count = {};
+
+        for (let i = 0; i < myString.length; i++) {
+            let myAlpha = myString[i];
+
+            if (count[myAlpha]) {
+                count[myAlpha]++;
+            }
+            else {
+                count[myAlpha] = 1;
+            }
+        }
+        console.log(count)
+      //  Each count
+
+        // var myString = "Om Namaha shiva";
+        // let count = 0;
+        // for (let i = 0; i < myString.length; i++) {
+        //     if (myString[i] === "a") {
+        //         count++;
+        //     }
+
+        // }
+        // console.log(count)
+
+
+        // const myStr = 'abfd 1324 !&*(& RANj';
+        // let space = 0, digit = 0, special = 0, alpha = 0;
+        // for (let i = 0; i < myStr.length; i++) {
+        //     if (myStr[i] === ' ') {
+        //         space++;
+        //     }
+        //     else if (myStr[i] >= '0' && myStr[i] <= '9') {
+        //         digit++;
+        //     }
+        //     else if ((myStr[i] >= 'a' && myStr[i] <= 'z') || (myStr[i] >= 'A' && myStr[i] <= 'Z')) {
+        //         alpha++;
+        //     }
+        //     else {
+        //         special++;
+        //     }
+        // }
+        // console.log("space count ==> " + space)
+        // console.log("digit count ==> " + digit)
+        // console.log("Special count ==> " + special)
+        // console.log("Alpha count ==> " + alpha)
+        //====================
+        // const checkPasswordStrength = (password) => {
+
+
+
+        //     if (password.length > 6 && password.length < 10 &&
+        //         password.match(/[a-z]/) &&
+        //         password.match(/\d+/) &&
+        //         password.match(/[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/)
+        //     ) {
+        //         console.log("valid " + password);
+
+        //     }
+
+        //     else {
+        //         console.log("Invalid")
+        //     }
+
+        // }
+        // checkPasswordStrength('Pass@123#')
+
+        // var str = "ransdfagsdfgsdfg";
+        // var res = str.match(/[a-z]{3}/gi);
+        // console.log(res);
+
+
+
+        // console.log(3 + 2 + "7");
+
+
+        // var output = (function (x) {
+        //     delete x;
+        //     return x;
+        // })(0);
+
+
+
+
+        // Reverse the sentences
+
+        const makeReverseSentence = (sentence) => {
+            // const myref = sentence.split('').reverse().join('');
+
+            const myref = sentence.split('').reverse().join('');
+
+            console.log(myref);
+
+
+        }
+        makeReverseSentence('ranjith kumar hn ');
+
+
+
+
+        // const makeReverseSentence = (sentence) => {
+        //     const revArray = [];
+        //     for (let i = sentence.length - 1; i >= 0; i--) {
+
+        //         revArray.push(sentence[i])
+        //     }
+        //     console.log(revArray.join(' '))
+        // }
+        // makeReverseSentence('ab cd');
+
+    </script>
+</body>
+
+</html>

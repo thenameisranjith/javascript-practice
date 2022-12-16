@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>callApplyBind</h1>
+    <script>
+        // let name ={
+        //     firstName:"Ranjith",
+        //     lastName:"Kumar",
+        //     printFullName: function(){
+        //         console.log(this.firstName,"--",this.lastName)
+
+        //     }
+        // }
+        // name.printFullName()
+
+        // // FUNCTION BORROWING
+        
+        // let name2={
+        //     firstName:"Ajaj",
+        //     lastName:"Nazeem"
+        // }
+
+        // name.printFullName.call(name2)
+
+
+        // normal use case of call  
+
+
+        let name ={
+            firstName:"Ranjith",
+            lastName:"Kumar",
+        }
+        let name2={
+            firstName:"Ajaj",
+            lastName:"Nazeem"
+        }
+
+      let printFullName= function(area,city){
+                console.log(this.firstName,"--",this.lastName, area, city)
+
+            }
+    //    printFullName.call(name,"Gopala","Shivamogga")
+    //    printFullName.call(name2,"Tippu Nagar","Bangalore")
+
+    //    apply method difference is passed in array
+       printFullName.call(name,"Gopala","Shivamogga")
+       printFullName.apply(name2,["Tippu Nagar","Bangalore"])
+
+
+
+    //    BIND
+
+            // same as call method difference is take of copy of method use it later
+            let printMyName = printFullName.bind(name,"White Field","Bangalore")
+            console.log(printMyName)
+
+            printMyName()
+
+    </script>
+</body>
+</html>

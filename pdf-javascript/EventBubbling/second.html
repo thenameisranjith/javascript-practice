@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.mystyle{
+    border: 1px solid black;
+    padding: 10px
+}
+
+</style>
+
+<body>
+    <div class="mystyle"  onclick="console.log(`Grand Parent`)">Grand Parent
+        <div class="mystyle"  onclick="console.log(`Parent`)"> Parent
+            <div class="mystyle" onclick="console.log(`Child`)">Child</div>
+        </div>
+    </div>
+</body>
+</html>

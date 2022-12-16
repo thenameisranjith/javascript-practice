@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        REST OPERATOR
+    </h1>
+    <script>
+        function myData(...args) {
+            console.log(args); // ["Marina",24,"Front-End Developer"]
+        }
+        myData("Marina", 24, "Front-End Developer", false);
+
+
+        // es6 rest parameter
+        const fun = (...input) => {
+            let sum = 0;
+            for (let i of input) {
+                sum += i;
+            }
+            return sum;
+        }
+       let reuslt  = fun(1, 2) //3
+       console.log(reuslt);
+        console.log(fun(1, 2, 3)); //6
+        console.log(fun(1, 2, 3, 4, 5)); //15  
+
+
+        const fun1=(a,b,...c)=>{
+            console.log(a,b,"::::::",...c);
+            console.log(typeof a);
+            console.log(c);
+            console.log(typeof c);
+            console.log(c.length);
+            console.log(c[0]);
+            console.log(c[3]);
+            console.log(c.indexOf(emp));
+        }
+
+
+            const emp = {
+                name:"Shan",
+                id:"24553254nmkldiof"
+            }
+        fun1('Mukul','Latiyan','Lionel','Messi',emp,'Barcelona');
+
+    </script>
+</body>
+
+</html>

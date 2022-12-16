@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: #150019;
+
+}
+
+.navigation{
+    position: fixed;
+    width: 0px;
+    height: 100%;
+    background: #3e0748;
+    transition: 0.5s;
+}
+
+.navigation:hover,
+.navigation.active
+{
+    width: 220px;
+}
+
+
+
+.toggle{
+    position: absolute;
+    top: 0;
+    left: 190px;
+    width: 60px;
+    height:60px;
+    background: #fff;
+    cursor: pointer;
+}
+
+
+
+
+
+

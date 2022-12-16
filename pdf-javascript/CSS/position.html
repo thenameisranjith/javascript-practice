@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .continer {
+        border: 1px solid red;
+        background-color: aqua;
+        height: 90px;
+    }
+
+    .box {
+        display: inline-block;
+        border: 1px solid black;
+        height: 50px;
+        width: 50px;
+        margin: 2px;
+    }
+
+    /* STATIC  BY DEFAULT  */
+    /* FIXED  == fixed to the browser window */
+
+    /* RELATIVE relative to it's normal position like left right top botoom (will leave a gap ) */
+    #box3 {
+        position: relative;
+        top: 40px;
+        left: 20px;
+        background-color: cadetblue;
+    }
+
+    /* ABSOLUTE relative to it's parent (means container) from the continer top and left of first parent */
+    #box2{
+        position: absolute;
+        top: 40px;
+        left: 20px;
+        background-color: chartreuse;
+    }
+
+
+</style>
+
+<body>
+    <div class="continer">
+
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+
+</body>
+
+</html>

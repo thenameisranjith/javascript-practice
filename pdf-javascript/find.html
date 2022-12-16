@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Find</h1>
+    <script>
+
+        // const names = ['chris', 'nick', 'holly'];
+
+        // const checkPersonName = (name) => {
+        //     return name === "nick"
+        // }
+
+        // document.write(names.find(checkPersonName))
+
+
+        // Simplified way
+
+
+
+        // const result = names.find(name => name === 'holly');
+        // document.write("<br/>", result)
+
+
+        // const numbers = [32, 43, 54, 34, 3, 90]
+        // const res = numbers.find(n => n === 90)
+        // document.write("<br>", res)
+
+
+        const personInfo = [
+
+            { name: "sanjith", age: 27 },
+            { name: "manjith", age: 24 },
+            { name: "karnjith", age: 29 },
+            { name: "ranjith", age: 26 },
+        ]
+
+
+        // const personResult = personInfo.find(person => person.name === "ranjith")
+
+        // console.log(personResult)
+        const otherResult = personInfo.find(person => person.name==="ranjith" && person.age>=25 && person.age <=27)
+        console.log(otherResult);
+        // document.write("<br/>", JSON.stringify(personInfo.find(checkUser)))
+    </script>
+</body>
+
+</html>

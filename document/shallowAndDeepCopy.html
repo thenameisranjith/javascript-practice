@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // var employee = {
+        //     eid: "E102",
+        //     ename: "Jack",
+        //     eaddress: "New York",
+        //     salary: 50000,
+        //     permanent_address: {
+        //         house_no: '200',
+        //         locality: 'Simi Valley',
+        //         city: 'New York',
+        //         country: 'USA'
+        //     }
+        // }
+
+
+        // // var newEmployee = employee;    // Shallow copy  for object for first level
+        // var newEmployee = Object.assign({},employee)// Shallow copy object.object for 2 level 
+        // console.log("==============================");
+        // newEmployee.eid = "EJIO45",
+        // newEmployee.ename= "Ranjith",
+        // newEmployee.permanent_address.house_no="970"
+        // console.log(employee);
+        // console.log(newEmployee);
+
+
+        // The newly created object has the same memory address as the old one. Hence, any change made to either of them changes the attributes for both.
+        // To overcome this problem, deep copy is used. If one of them is removed from memory, 
+
+
+
+        // DEEP COPY //
+        var employee = {
+            eid: "E102",
+            ename: "Jack",
+            eaddress: "New York",
+            salary: 50000,
+            permanent_address: {
+                house_no: '200',
+                locality: 'Simi Valley',
+                city: 'New York',
+                country: 'USA'
+            }
+        }
+
+        let newEmployee = JSON.parse(JSON.stringify(employee))
+
+        newEmployee.ename="Ranjith"
+        newEmployee.permanent_address.country = "India"
+        newEmployee.permanent_address.locality = "Bangalore"
+        console.log(employee);
+        console.log(newEmployee);
+
+    </script>
+</body>
+
+</html>

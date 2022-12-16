@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        try {
+            console.log("------", ranjith);
+        }
+        catch (error) {
+            console.log("------", "error block");
+            document.write("ERROR IS: ", error)
+        }
+
+        setTimeout(() => {
+
+            console.log("second");
+        }, 2000)
+
+        setTimeout(() => {
+            console.log("third");
+        }, 3000)
+
+
+        try {
+            setTimeout(() => {
+                try {
+                    console.log("------", ranjith);
+                }
+                catch (error) {
+                    
+                    document.write("ERROR IS: ", JSON.stringify(error.message+" ==== "+error.stack))
+                    console.error({ error })
+                }
+
+            }, 500)
+        } catch (error) {
+            console.error({ error })
+        }
+    </script>
+</body>
+
+</html>
