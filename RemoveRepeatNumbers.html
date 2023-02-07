@@ -23,9 +23,7 @@
                 { "name": "Joe", "age": 17 },
                 { "name": "Joe", "age": 17 },
             ]
-
         const key = 'name';
-
         const arrayUniqueByKey = [...new Map(array.map(item =>
             [item[key], item])).values()];
 

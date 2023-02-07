@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1 id="page-header" class="header-info" style="color: red">
+        Acess The Dom
+      </h1>
+      <p>
+        Learn the dom manipulation it's very helpfull while working in the
+        project
+      </p>
+      <div id="location" class="location-details">
+        <address>Bangalore</address>
+        <li>Karnataka</li>
+        <div></div>
+      </div>
+    </div>
+
+    <script>
+      /*
+            element selector
+            Single elment selector
+        */
+      let ele = document.getElementById("page-header");
+      //   console.log(ele);
+      //   console.log(ele.className);
+      //   console.log(ele.style.color);
+      //   console.log(ele.childNodes);
+      //   console.log(ele.parentNode);
+      //   ele.innerText = "Learning react js";
+      //   ele.innerHTML = "<b>Learning react js</b>";
+      console.log(ele.innerHTML);
+
+      // query selector
+
+      let sel = document.querySelector("#location");
+      console.log(sel);
+      let res = document.querySelector("li");
+      console.log(res);
+
+      //   Multi element selector
+
+      let elem = document.getElementsByClassName("location-details");
+      console.log(elem);
+
+      //   Tag
+
+      let list = document.getElementsByTagName("div");
+      console.log(list);
+    </script>
+  </body>
+</html>

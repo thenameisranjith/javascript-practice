@@ -8,18 +8,12 @@
   </head>
 
   <body>
-    <h1>Callback</h1>
     <script>
-      const getOrder = (callback) => {
-        console.log("Oreder recived from customer");
-        callback();
-      };
-
-      const startProduction = () => {
-        console.log("Start the production");
-      };
-
-      getOrder(startProduction);
+      const stringName = "RanjithKumarHn";
+      console.log(...stringName);
+      console.log(stringName.split(""));
+      // console.log(" 3 ", object.assign([], stringName))
+      console.log(Array.from(stringName));
     </script>
   </body>
 </html>

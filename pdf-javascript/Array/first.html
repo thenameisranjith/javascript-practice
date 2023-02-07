@@ -1,79 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        // const array1 = [1, 4, 9, 16, 49, 81];
+      const array1 = [1, 4, 9, 16, 49, 81];
+      console.log(array1.reduce((cur, acc) => cur + acc, 0));
+      //   const result = array1.map((item) => Math.sqrt(item));
+      //   //   console.log(result);
 
-        // const details = [{ id: 1, name: 'raj', age: 23, marrried: true },
-        // { id: 4, name: 'saj', age: 26, marrried: false },
-        // { id: 6, name: 'khan', age: 21, marrried: true },
-        // { id: 8, name: 'david', age: 28, marrried: false }]
+      //   const details = [
+      //     { id: 1, name: "raj", age: 23, marrried: true },
+      //     { id: 4, name: "saj", age: 26, marrried: false },
+      //     { id: 6, name: "khan", age: 21, marrried: true },
+      //     { id: 8, name: "david", age: 28, marrried: false },
+      //   ];
 
-        // //MAP
+      //   // //MAP
 
-        // const result = array1.map((item) => Math.sqrt(item))
-        // console.log(result)
+      //   //   const result1 = details.map((item, index) => {
+      //   //     console.log(item, "==", index, "==");
+      //   //   });
 
-        // const result1 = details.map((item, index, details) => {
-        //     console.log(item, "==", index, "==", details)
-        // })
+      //   const employees = [
+      //     { name: "Adam", salary: 5000, bonus: 500, tax: 1000 },
+      //     { name: "Noah", salary: 8000, bonus: 1500, tax: 2500 },
+      //     { name: "Fabiano", salary: 1500, bonus: 500, tax: 200 },
+      //     { name: "Alireza", salary: 4500, bonus: 1000, tax: 900 },
+      //   ];
 
-        const employees = [
-            { name: "Adam", salary: 5000, bonus: 500, tax: 1000 },
-            { name: "Noah", salary: 8000, bonus: 1500, tax: 2500 },
-            { name: "Fabiano", salary: 1500, bonus: 500, tax: 200 },
-            { name: "Alireza", salary: 4500, bonus: 1000, tax: 900 },
-        ];
+      //   const empSalList = employees.map((item) => {
+      //     const list = {};
+      //     list["Name"] = item.name;
+      //     list["Salary"] = item.salary;
+      //     list["tax deducation"] = item.tax;
+      //     return list;
+      //   });
+      // //   console.log(empSalList);
 
-        const empSalList = employees.map(item=>{
-            const list ={}
-            list["Name"] = item.name
-            list["salary"] = item.salary
-            list["tax"] = item.tax
-            return list
-        })
-        // console.log(empSalList);
+      //   const myUsers = [
+      //     { name: "shark", likes: "ocean" },
+      //     { name: "turtle", likes: "pond" },
+      //     { name: "otter", likes: "fish biscuits" },
+      //   ];
 
-        // const myUsers = [
-        //     { name: 'shark', likes: 'ocean' },
-        //     { name: 'turtle', likes: 'pond' },
-        //     { name: 'otter', likes: 'fish biscuits' }
-        // ]
+      //   const usersByLikes = myUsers.map((item) => {
+      //     const container = {};
 
-        // const usersByLikes = myUsers.map(item => {
-        //     const container = {};
+      //     container[item.name] = item.name;
+      //     container.age = item.name.length * 10;
 
-        //     container[item.name] = item.name;
-        //     container.age = item.name.length * 10;
+      //     return container;
+      //   });
 
-        //     return container;
-        // })
+      //   console.log(usersByLikes);
+      //   // console.log(result1)
 
-        // console.log(usersByLikes);
-        // console.log(result1)
+      //   // REDUCE
 
-        
+      const score = ["javascipt", "is", "fun"];
 
+      //   const totalScore = score.reduce((acc, crt) => acc + crt);
+      //   console.log("--> ", totalScore);
 
-        // REDUCE
+      console.log();
 
-        const score = ["javascipt","is","fun"]
+      var a;
+      console.log(a);
+      a = 1;
 
-        const totalScore = score.reduce((acc,crt)=> acc+crt)
-        console.log("--> ",totalScore)
+      const employees = [
+        { name: "Adam", salary: 5000, bonus: 500, tax: 1000 },
+        { name: "Noah", salary: 8000, bonus: 1500, tax: 2500 },
+        { name: "Fabiano", salary: 1500, bonus: 500, tax: 200 },
+        { name: "Alireza", salary: 4500, bonus: 1000, tax: 900 },
+      ];
 
-        var a
-        console.log(a)
-        a =1
+      const newEmpIdList = employees.map((item) => {
+        const list = {};
+        list["Name"] = item.name;
+        list["EmpId"] = Math.random() * 100;
+        return list;
+      });
+      console.log(newEmpIdList);
     </script>
-</body>
-
+  </body>
 </html>
