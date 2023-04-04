@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Promise example</h1>
+    <script>
+      let is_shop_open = true;
+
+      const order = (time, work) => {
+        return new Promise((res, rej) => {
+          if (is_shop_open) {
+            setTimeout(() => {
+              res(work());
+            }, time);
+          } else {
+            rej(console.log("our shop is closed "));
+          }
+        });
+      };
+
+      order(2000, () => {
+        console.log(`mango was selected`);
+      })
+        .then(() => {
+          return order(0000, () => {
+            console.log("prod started");
+          });
+        })
+        .then(() => {
+          return order(2000, () => {
+            console.log("fruit is choped ");
+          });
+        })
+        .then(() => {
+          return order(1000, () => {
+            console.log("add water and start machine");
+          });
+        })
+        .then(() => {
+          return order(1000, () => {
+            console.log("add toppings");
+          });
+        })
+        .then(() => {
+          return order(1000, () => {
+            console.log("server ice cream");
+          });
+        })
+        .catch(() => {
+          console.log("cutomer left the shop...");
+        })
+        .finally(() => {
+          console.log("end of the day and Thank you");
+          console.log("welcome back");
+        });
+    </script>
+  </body>
+</html>

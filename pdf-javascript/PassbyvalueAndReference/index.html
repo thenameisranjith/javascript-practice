@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // re assign is possiable in let
+      // PASS BY VALUE
+      let a = 5;
+      let b = a;
+      console.log(a);
+      console.log(b);
+
+      //   change in the value of b
+
+      b = a + 5;
+      console.log(b);
+      console.log(a);
+
+      //   PASS BY REFERENCE---> we are passing references (object and array)
+
+      let info1 = {
+        name: "ranjith",
+        age: 28,
+      };
+
+      //   console.log(info1);
+      let info2 = info1;
+      //   console.log(info2);
+      info2.age = "27";
+      console.log(info2);
+      console.log(info1);
+    </script>
+  </body>
+</html>

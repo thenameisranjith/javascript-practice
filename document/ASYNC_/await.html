@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>AWAIT</h1>
+    <script>
+      let is_shop_open = true;
+
+      const time = (time) => {
+        return new Promise((res, rej) => {
+          if (is_shop_open) {
+            setTimeout(res, time);
+          } else {
+            rej(console.log("shop is closed"));
+          }
+        });
+      };
+
+      const order = async () => {
+        try {
+          await time(2000);
+          console.log("mango selected ");
+          await time(0000);
+          console.log("prod started");
+          await time(2000);
+          console.log("fruit is choped ");
+          await time(1000);
+          console.log("add water and start machine");
+          await time(1000);
+          console.log("server ice cream");
+          await time(1000);
+        } catch {
+          console.log("cutomer left the shop...");
+        } finally {
+          console.log("end of the day and Thank you");
+          console.log("welcome back");
+        }
+      };
+
+      order();
+    </script>
+  </body>
+</html>

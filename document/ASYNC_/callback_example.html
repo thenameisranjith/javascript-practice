@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>CALLBACk</h1>
+    <script>
+      const order = (fruitName, callback) => {
+        setTimeout(() => {
+          console.log(`Order recived fruit name is ${fruitName}`);
+          callback();
+        }, 2000);
+      };
+
+      const production = () => {
+        setTimeout(() => {
+          console.log("prod started");
+          setTimeout(() => {
+            console.log("fruit has been choped ");
+            setTimeout(() => {
+              console.log("add water and start the machine");
+              setTimeout(() => {
+                console.log("select topings");
+                setTimeout(() => {
+                  console.log("serve icecream");
+                }, 2000);
+              }, 2000);
+            }, 1000);
+          }, 2000);
+        }, 0000);
+      };
+
+      order("mango", production);
+    </script>
+  </body>
+</html>

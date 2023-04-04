@@ -10,7 +10,7 @@
   <body>
     <script>
       const array1 = [1, 4, 9, 16, 49, 81];
-      console.log(array1.reduce((cur, acc) => cur + acc, 0));
+      console.log(array1.reduce((cur, acc) => cur + acc));
       //   const result = array1.map((item) => Math.sqrt(item));
       //   //   console.log(result);
 
@@ -88,6 +88,24 @@
         return list;
       });
       console.log(newEmpIdList);
+
+      // add property by using map method
+
+      const updateArr = employees.map((item) => ({
+        ...item,
+        city: "Bangalore",
+        totoalSalary: item.salary + item.bonus,
+      }));
+
+      console.log(updateArr);
+
+      // remove the property by using map method
+
+      const newArray = employees.map(({ salary, bonus, ...rest }) => {
+        return rest;
+      });
+
+      console.log("NEW ARRAY ....>", newArray);
     </script>
   </body>
 </html>
